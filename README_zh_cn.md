@@ -1,47 +1,48 @@
 # SE_Graphy
-##### This repo is also in other languages: [简体中文][zh_cn]
-## I. Pre-Installation
-### For Windows 10 and later
-1.Download the Neo4j Community Server from [Official Website][n4jsite] or download directly from [here][n4jwindl]
+##### 此Repo还提供其他语言: [English][en]
+## I. 准备工作
+### 对于 Windows 10 及更新版本
+1.从 [官网][n4jsite] 下载 Neo4j Community Server 或者在[这里][n4jwindl]直接下载。
 
-2.Unzip the downloaded zip file, you'll get a folder containing the essential files for installing the Neo4j Server.
+2.将下载的zip文件解压缩，你将得到包含Neo4j Server安装的必要文件的文件夹。
 
-3.Go to the **/bin** directory and open the **neo4j.bat** file with Command Prompt (CMD.exe)
+3.前往名为 **/bin** 的目录，并使用命令提示符（CMD）打开 **neo4j.bat**
 
-4.Execute these commands:
+4.执行下列命令:
     
     neo4j.bat install-service
     neo4j.bat start
 
-5.Check if service up and running:
+5.检查是否启动并运行:
     
     neo4j.bat status
-if **"Neo4j is running"** is shown, then you are all good.
+    
+如果看到： **"Neo4j is running"**，那么代表你成功了！
 
-### For Linux
-#### Debian and Ubuntu
-1.Execute the following code in your terminal:
+### 对于 Linux
+#### Debian 和 Ubuntu
+1.在终端中执行下列命令:
 
     wget -O - https://debian.neo4j.com/neotechnology.gpg.key | sudo apt-key add -
     echo 'deb https://debian.neo4j.com stable latest' | sudo tee /etc/apt/sources.list.d/neo4j.list
     sudo apt-get update
 
-2.Then execute:
+2.然后执行:
 
     sudo apt-get install neo4j
 
-3.Then check if Neo4j Server is correctly installed and running:
+3.然后检查 Neo4j Server 是否成功安装并运行:
 
     sudo systemctl status neo4j
 
-4.Go to:
+4.在浏览器中前往:
 
     http://localhost:7474/
 
-and you are ready go
+如果界面正常显示，那么你成功了！
 
 [n4jsite]: https://neo4j.com/deployment-center/
 
-[zh_cn]: https://github.com/Sthrumbee/SE_Graphy/blob/main/README_zh_cn.md
+[en]: https://github.com/Sthrumbee/SE_Graphy/blob/main/README.md
 
 [n4jwindl]: https://go.neo4j.com/download-thanks.html?edition=community&release=5.12.0&flavour=winzip
