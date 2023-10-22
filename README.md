@@ -1,4 +1,4 @@
-# SE_Graphy
+# SE_P2G8_KnowledgeGraph
 ##### This repo is also in other languages: [简体中文][zh_cn]
 ## I. Pre-Installation
 ### For Windows 10 and later
@@ -42,6 +42,6 @@ and you are ready go
 
 [n4jsite]: https://neo4j.com/deployment-center/
 
-[zh_cn]: https://github.com/Sthrumbee/SE_Graphy/blob/main/README_zh_cn.md
+[zh_cn]: https://github.com/Sthrumbee/SE_P2G8_KnowledgeGraph/blob/main/README_zh_cn.md
 
 [n4jwindl]: https://go.neo4j.com/download-thanks.html?edition=community&release=5.12.0&flavour=winzip
