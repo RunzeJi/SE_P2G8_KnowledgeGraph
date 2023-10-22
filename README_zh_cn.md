@@ -6,7 +6,7 @@
 
 2.将下载的zip文件解压缩，你将得到包含Neo4j Server安装的必要文件的文件夹。
 
-3.前往名为 **/bin** 的目录，并使用命令提示符（CMD）打开 **neo4j.bat**
+3.前往名为 **/bin** 的目录，并使用命令提示符（CMD）打开 **"neo4j.bat"**
 
 4.执行下列命令:
     
@@ -17,7 +17,7 @@
     
     neo4j.bat status
     
-如果看到： **"Neo4j is running"**，那么代表你成功了！
+如果看到： **"Neo4j is running"**，那么代表你成功了！🎉
 
 ### 对于 Linux
 #### Debian 和 Ubuntu
@@ -39,7 +39,7 @@
 
     http://localhost:7474/
 
-如果界面正常显示，那么你成功了！
+如果界面正常显示，那么你成功了！🎉
 
 [n4jsite]: https://neo4j.com/deployment-center/
 
