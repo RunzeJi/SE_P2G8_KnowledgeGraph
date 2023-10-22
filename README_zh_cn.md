@@ -43,6 +43,6 @@
 
 [n4jsite]: https://neo4j.com/deployment-center/
 
-[en]: https://github.com/Sthrumbee/SE_Graphy/blob/main/README.md
+[en]: https://github.com/Sthrumbee/SE_P2G8_KnowledgeGraph/blob/main/README.md
 
 [n4jwindl]: https://go.neo4j.com/download-thanks.html?edition=community&release=5.12.0&flavour=winzip
