@@ -16,7 +16,7 @@
 5.Check if service up and running:
     
     neo4j.bat status
-if **"Neo4j is running"** is shown, then you are all good.
+if **"Neo4j is running"** is shown, then you are all set.🎉
 
 ### For Linux
 #### Debian and Ubuntu
@@ -38,7 +38,7 @@ if **"Neo4j is running"** is shown, then you are all good.
 
     http://localhost:7474/
 
-and you are ready go
+and you are ready go.🎉
 
 [n4jsite]: https://neo4j.com/deployment-center/
 
