@@ -39,6 +39,9 @@ if **"Neo4j is running"** is shown, then you are all set.🎉
     http://localhost:7474/
 
 and you are ready go.🎉
+### For macOS
+1.
+2.
 
 [n4jsite]: https://neo4j.com/deployment-center/
 
