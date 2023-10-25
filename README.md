@@ -1,8 +1,9 @@
 # SE_P2G8_KnowledgeGraph
-##### This repo is also in other languages: [简体中文][zh_cn]
+##### This repo is also in other languages: [简体中文](https://github.com/Sthrumbee/SE_P2G8_KnowledgeGraph/blob/main/README_zh_cn.md)
+
 ## I. Pre-Installation
 ### For Windows 10 and later
-1.Download the Neo4j Community Server from [Official Website][n4jsite] or download directly from [here][n4jwindl]
+1.Download the Neo4j Community Server from [Official Website](https://neo4j.com/deployment-center/) or download directly from [here(Windows)](https://go.neo4j.com/download-thanks.html?edition=community&release=5.12.0&flavour=winzip)
 
 2.Unzip the downloaded zip file, you'll get a folder containing the essential files for installing the Neo4j Server.
 
@@ -43,8 +44,9 @@ and you are ready go.🎉
 1.
 2.
 
-[n4jsite]: https://neo4j.com/deployment-center/
-
-[zh_cn]: https://github.com/Sthrumbee/SE_P2G8_KnowledgeGraph/blob/main/README_zh_cn.md
-
-[n4jwindl]: https://go.neo4j.com/download-thanks.html?edition=community&release=5.12.0&flavour=winzip
+## Project Progress Track
+#### Oct.23 - Held discussion and drafted the overall system structure
+1. Preliminary assessment on the redesign and layout of frontend elements.
+2. Finished the HTML code for the login page.
+3. Decision on the Frontend-backend modules will be used in the project.
+4. Embedded Apache Echarts.
