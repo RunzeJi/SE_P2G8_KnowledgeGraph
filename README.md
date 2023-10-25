@@ -43,10 +43,3 @@ and you are ready go.🎉
 ### For macOS
 1.
 2.
-
-## Project Progress Track
-#### Oct.23 - Held discussion and drafted the overall system structure
-1. Preliminary assessment on the redesign and layout of frontend elements.
-2. Finished the HTML code for the login page.
-3. Decision on the Frontend-backend modules will be used in the project.
-4. Embedded Apache Echarts.
