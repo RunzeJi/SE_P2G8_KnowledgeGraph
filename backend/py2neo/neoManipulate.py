@@ -22,7 +22,7 @@ def createNeoNode():
     return graph.run("MATCH (n) RETURN n LIMIT 5")
 
 # this function uses module 'py2neo' to connect to neo4j and get the results of a query(获取结果)
-def getNeoResult(numOfReturns=5, numOfReturnLimit=5):
+def getNeoResult(numOfReturns=5, numOfReturnLimit=5, cmd=""):
     # connect to neo4j
     graph = py2neo.Graph(host="localhost", user=p2nUsername, password=p2nPassword)
     # get the results of the query
