@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Graphy</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
 </head>
 <body>
-    <img src="homepage.jpg" width="100%"/>
+    <img src="{{ url_for('static', filename='homepage.jpg') }}" width="100%"/>
     <h1 style="text-align: center;">欢迎使用Graphy</h1>
     <p style="text-align: center;">请输入用户名和密码进行登录：</p>
     <div id="loginCredentialsContainer" class="container">
@@ -15,7 +15,7 @@
             <h1 style="text-align: center;">登录</h1>
         </div>
         <div class="main">
-            <form>
+            <form id="credentialsForm">
                <span>
                    <input id="usernameInput" type="text" placeholder="账号">
                </span><br>
@@ -23,11 +23,32 @@
                <span>
                    <input id="passwordInput" type="password" placeholder="密码">
                </span><br>
-               <button id="loginButton">登 录</button>
+               <button id="loginButton" type="button">登 录</button>
        
             </form>
            </div>
     </div>
-    <a href="signup.html">新用户</a>
+    <a href="{{ url_for('signup') }}">新用户</a>
 </body>
+
+<script>
+    document.getElementById("loginButton").addEventListener("click", function() {
+      // 获取输入框的值
+      var username = document.getElementById("usernameInput").value;
+      var password = document.getElementById("passwordInput").value;
+  
+      // 创建一个FormData对象来包含表单数据
+      var userFormData = new FormData();
+      userFormData.append("username_input", username);
+      userFormData.append("password_input", password);
+  
+      // 发送Ajax请求到服务器端（Flask）
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "/login_clicked");
+      xhr.send(userFormData);
+  
+      // 可以在这里执行其他操作，如显示加载状态或处理响应
+    });
+</script>
+  
 </html>
