@@ -1,6 +1,6 @@
 import py2neo
 import sys
-from CQL import node
+from backend.py2neo.classNode import node
 
 neoHost = "localhost"
 p2nUsername = "py2neo"

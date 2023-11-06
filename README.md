@@ -40,6 +40,21 @@ if **"Neo4j is running"** is shown, then you are all set.🎉
     http://localhost:7474/
 
 and you are ready go.🎉
-### For macOS
-1.
-2.
+### For macOS (Server Only, No Desktop Env)
+#### First Go to the Neo4j [Deployment Center](https://neo4j.com/deployment-center/)
+
+1.Download the macOS Version of Neo4j.
+
+2.Extract all files.
+
+3.Open Terminal under the extracted directory.
+
+4.Execute commands:
+    
+    ./bin/neo4-admin server console
+
+5.In browser, open [http://localhost:7474](http://localhost:7474)
+
+6.Use [bolt://localhost:7687](bolt://localhost:7687) to connect to database.
+
+7.To terminate server, Press **'Ctrl + C'**.
