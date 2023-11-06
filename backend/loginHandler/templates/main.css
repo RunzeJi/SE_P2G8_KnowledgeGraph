@@ -1,0 +1,17 @@
+.container {
+    position: relative;
+    width: 100%; /* 主容器的宽度占满1.html */
+    height: 100vh; /* 设置高度，您可以根据需要进行调整 */
+    overflow: hidden; /* 防止2.html内容溢出 */
+}
+
+iframe {
+    position: relative;
+    top: 200px; /* 顶部留白200px */
+    left: 200px; /* 左侧留白200px */
+    right: 20px; /* 右侧留白20px */
+    bottom: 0; /* 底部无留白 */
+    width: auto; /* 宽度自适应 */
+    height: auto; /* 高度自适应 */
+    border: none; /* 移除iframe的边框 */
+}
