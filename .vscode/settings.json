@@ -1,0 +1,7 @@
+{
+    "git.useEditorAsCommitInput": false,
+    "git.alwaysShowStagedChangesResourceGroup": false,
+    "git.autofetch": false,
+    "git.autoStash": false,
+    "git.enableSmartCommit": true
+}
