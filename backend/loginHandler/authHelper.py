@@ -11,7 +11,7 @@ def addUser(username='', password=''):
     print(f'created new user:[{username}, {password}]')
     driver.close()
     return 0
-
+ 
 def addCredentials(credentialsDict):
     with open('credentials.json', 'a') as f:
         json.dump(credentialsDict, f)

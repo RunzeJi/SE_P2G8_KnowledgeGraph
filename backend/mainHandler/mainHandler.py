@@ -12,12 +12,12 @@ def login():
 
 @app.route('/login_clicked', methods=['POST'])
 def login_clicked():
-    username = request.form.get('username_input')
-    password = request.form.get('password_input')
-    print(username)
-    print(password)
+    login_username = request.form.get('username_input')
+    login_password = request.form.get('password_input')
+    print(f'login_username={login_username}')
+    print(f'login_password={login_password}')
 
-    userCredential = [username, password]
+    userCredential = [login_username, login_password]
     login_success = True
     if login_success:
         return redirect('http://localhost:8000/home', code=302)
@@ -32,8 +32,8 @@ def signup():
 def signup_clicked():
     sign_up_username = request.form.get('username_input')
     sign_up_password = request.form.get('password_input')
-    print(sign_up_username)
-    print(sign_up_password)
+    print(f'signup_username={sign_up_username}')
+    print(f'signup_password={sign_up_password}')
     return redirect(url_for('login'))
 
 @app.route('/home')
