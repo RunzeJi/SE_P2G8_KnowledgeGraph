@@ -11,8 +11,8 @@
         <tr>
             <td>性别：</td>
             <td>
-                <input type="radio" name="sex">男
-                <input type="radio" name="sex">女
+                <input type="radio" name="male">男
+                <input type="radio" name="female">女
             </td>
         </tr>
       <tr>
@@ -105,6 +105,7 @@
         <td>学历：</td>
         <td>
             <select>
+                <option>--请选择--</option>
                 <option>小学</option>
                 <option>初中</option>
                 <option>高中</option>
@@ -124,6 +125,26 @@
         <td><input id="setPassword" type="text"></td>
      </tr>
     </table>
-    <a href="signupHandler.html" target="_blank">点击注册</a>
+    <button id="signupClick" href="signupHandler.html" target="_blank">点击注册</button>
 </body>
+
+<script>
+    document.getElementById("signupClick").addEventListener("click", function() {
+      // 获取输入框的值
+      var username = document.getElementById("setUsername").value;
+      var password = document.getElementById("setPassword").value;
+  
+      // 创建一个FormData对象来包含表单数据
+      var userFormData = new FormData();
+      userFormData.append("username_input", username);
+      userFormData.append("password_input", password);
+  
+      // 发送Ajax请求到服务器端（Flask）
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "/signup_clicked");
+      xhr.send(userFormData);
+      // 可以在这里执行其他操作，如显示加载状态或处理响应
+    });
+</script>
+
 </html>

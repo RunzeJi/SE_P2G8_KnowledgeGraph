@@ -2,14 +2,14 @@
 <html lang="en" style="height: 100%">
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 </head>
 <body style="height: 100%; margin: 0; background-color: rgb(40, 40, 40);">
     <div id="container" style="height: 100%">
         <h1 style="color: white;">"Basic Knowledge Graph Demonstration"</h1>
     </div>
     <div>
-        <iframe id="graphicFrame" src="echarts.html" width="1280" height="720" style="position: absolute; top: 100px; bottom: 0px; right: 10px; background-color: white;">
+        <iframe id="graphicFrame" src="{{ url_for('static', filename='echarts.html') }}" width="1920" height="1080" style="position: absolute; top: 100px; bottom: 0px; right: 10px; background-color: white;">
         </iframe>
     </div>
 

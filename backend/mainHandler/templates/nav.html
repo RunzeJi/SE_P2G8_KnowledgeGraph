@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>nav.html</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
+</head>
+<body>
+
+  <div class="header"></div>
+  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+
+  <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+  </label>
+
+  <div id="sidebarMenu">
+    <ul class="sidebarMenuInner">
+      <li>Graphy<span>Knowledge Graph</span></li>
+      <a href="http://localhost:8000/home" target="_blank"><li>Home</li></a>
+      <a href="http://localhost:8000/fullscreengraph" target="_blank"><li>Full Screen Graph</li></a>
+      <a href="http://localhost:8000/root" target="_blank"><li>Twitter</li></a>
+      <a href="http://localhost:8000/root" target="_blank"><li>YouTube</li></a>
+      <a href="http://localhost:8000/root" target="_blank"><li>Neo4j Browser</li></a>
+      <a href="http://localhost:8000/root" target="_blank"><li>Fuck</li></a>
+    </ul>
+  </div>
+
+  <div id='center' class="main center">
+    <div class="mainInner">
+      <div>PURE CSS SIDEBAR TOGGLE MENU</div>
+    </div>
+    <div class="mainInner">
+      <div>PURE CSS SIDEBAR TOGGLE MENU</div>
+    </div>
+    <div class="mainInner">
+      <div>PURE CSS SIDEBAR TOGGLE MENU</div>
+    </div>
+  </div>
+
+</body>
+</html>
