@@ -144,7 +144,9 @@
       xhr.open("POST", "/signup_clicked");
       xhr.send(userFormData);
       // 可以在这里执行其他操作，如显示加载状态或处理响应
+      window.location.href = "http://localhost:8000/login";
     });
+    
 </script>
 
 </html>

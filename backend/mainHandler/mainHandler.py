@@ -22,7 +22,7 @@ def login_clicked():
     if login_success:
         return redirect('http://localhost:8000/home', code=302)
     else:
-        return redirect(url_for('login'))
+        return redirect(url_for('login'), code=302)
 
 @app.route('/signup')
 def signup():
