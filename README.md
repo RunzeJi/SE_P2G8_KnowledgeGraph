@@ -3,10 +3,15 @@
 
 #### Usage - 使用方法
 0.Follow **I.Pre-Installation** Steps and configure environments like Neo4j Server and JDK17.
+
 &ensp;&ensp;&ensp;&ensp;(跟随**I.Pre-Installation**中介绍的步骤配置Neo4j Server 和 JDK17 等软件环境。)
+
 1.Entrypoint: Run **"../backend/mainHandler/mainHandler.py"**. Make sure you have installed the required modules using **pip**.
+
 &ensp;&ensp;&ensp;&ensp;(程序入口：运行 **"../backend/mainHandler/mainHandler.py"**。确保已经使用 **pip**安装了必须的Python模块。)
+
 2.Go to [http://localhost:8000/login](http://localhost:8000/login) on your local machine.
+
 &ensp;&ensp;&ensp;&ensp;(在本地宿主机上打开[http://localhost:8000/login](http://localhost:8000/login))
 
 
@@ -16,6 +21,7 @@
 0.Download and install JDK17 from Oracle or OpenJDK
 
 1.Download the Neo4j Community Server from [Official Website](https://neo4j.com/deployment-center/) or download directly from [here(Windows)](https://go.neo4j.com/download-thanks.html?edition=community&release=5.12.0&flavour=winzip)
+
 
 2.Unzip the downloaded zip file, you'll get a folder containing the essential files for installing the Neo4j Server.
 
