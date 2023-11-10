@@ -18,24 +18,23 @@
 
 ## I. Pre-Installation
 ### For Windows 10 and later
-0.Download and install JDK17 from Oracle or OpenJDK
+0.Download and install JDK17 from Oracle or OpenJDK（在Oracle或者OpenJDK官网下载JDK17并安装）
 
-1.Download the Neo4j Community Server from [Official Website](https://neo4j.com/deployment-center/) or download directly from [here(Windows)](https://go.neo4j.com/download-thanks.html?edition=community&release=5.12.0&flavour=winzip)
+1.Download the Neo4j Community Server from [Official Website](https://neo4j.com/deployment-center/) or download directly from [here(Windows)](https://go.neo4j.com/download-thanks.html?edition=community&release=5.12.0&flavour=winzip)（在Neo4j Deployment Center中，前往"Graph DatabaseSelf-Managed"区域，"Community"标签下下载适用于Windows的zip压缩包）
 
+2.Unzip the downloaded zip file, you'll get a folder containing the essential files for installing the Neo4j Server.（解压下载好的zip文件）
 
-2.Unzip the downloaded zip file, you'll get a folder containing the essential files for installing the Neo4j Server.
+3.Go to the **\bin** directory and open the **neo4j.bat** file with Command Prompt (CMD.exe)（前往该文件夹的中的 **\bin** 目录，将命令提示符（cmd.exe）的工作路径改为当前文件夹的路径，（或者在 **\bin** 文件夹的地址栏键入cmd然后Enter））
 
-3.Go to the **/bin** directory and open the **neo4j.bat** file with Command Prompt (CMD.exe)
-
-4.Execute these commands:
+4.Execute these commands:（执行下列指令）
     
     neo4j.bat install-service
     neo4j.bat start
 
-5.Check if service up and running:
+5.Check if service up and running:（检查Neo4j Service 是否启动）
     
     neo4j.bat status
-if **"Neo4j is running"** is shown, then you are all set.🎉
+if **"Neo4j is running"** is shown, then you are all set.🎉（如果显示 **"Neo4j is running"**，那么你就成功了！）
 
 ### For Linux
 #### Debian and Ubuntu
