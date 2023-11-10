@@ -15,12 +15,11 @@
 &ensp;&ensp;&ensp;&ensp;(在本地宿主机上打开[http://localhost:8000/login](http://localhost:8000/login))
 
 
-
 ## I. Pre-Installation
 ### For Windows 10 and later
 0.Download and install JDK17 from Oracle or OpenJDK（在Oracle或者OpenJDK官网下载JDK17并安装）
 
-1.Download the Neo4j Community Server from [Official Website](https://neo4j.com/deployment-center/) or download directly from [here(Windows)](https://go.neo4j.com/download-thanks.html?edition=community&release=5.12.0&flavour=winzip)（在Neo4j Deployment Center中，前往"Graph DatabaseSelf-Managed"区域，"Community"标签下下载适用于Windows的zip压缩包）
+1.Download the Neo4j Community Server from [Official Website](https://neo4j.com/deployment-center/) or download directly from [here(Windows)](https://go.neo4j.com/download-thanks.html?edition=community&release=5.12.0&flavour=winzip)（在Neo4j Deployment Center中，前往"Graph DatabaseSelf-Managed"区域，"Community"标签下下载适用于Windows的zip压缩包，或者点击[此链接](https://go.neo4j.com/download-thanks.html?edition=community&release=5.12.0&flavour=winzip)直接下载Windows版）
 
 2.Unzip the downloaded zip file, you'll get a folder containing the essential files for installing the Neo4j Server.（解压下载好的zip文件）
 
