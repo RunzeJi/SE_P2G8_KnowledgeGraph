@@ -27,13 +27,13 @@ body {
     height: 100%;
     margin-top: 60px;
 }
-.mainInner{
+.mainInner1{
     display: table;
     height: 100%;
     width: 100%;
     text-align: center;
 }
-.mainInner div{
+.mainInner1 div{
     display:table-cell;
     vertical-align: middle;
     font-size: 3em;

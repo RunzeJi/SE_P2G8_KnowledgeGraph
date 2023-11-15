@@ -60,5 +60,6 @@ def send_login_status():
 def nav():
     return render_template('nav.html')
 
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8000)
