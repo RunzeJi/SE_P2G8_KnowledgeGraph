@@ -44,17 +44,17 @@ def home():
 def root():
     return render_template('root.html')
 
-@app.route('/fetchData')
-def fetchData():
-    return app.send_static_file('graphData.json')
+@app.route('/graph')
+def sendGraph():
+    return render_template('graph-simple-external.html')
 
-@app.route('/echarts.html')
-def sendECharts():
-    return app.send_static_file('echarts.html')
-
-@app.route('/sendechartsjs')
-def sendecjs():
+@app.route('/send_echarts_js')
+def send_echarts_js():
     return app.send_static_file('echarts.js')
+
+@app.route('/send_login_stat')
+def send_login_status():
+    return app.send_static_file('loginSuccess.js')
 
 @app.route('/nav')
 def nav():
