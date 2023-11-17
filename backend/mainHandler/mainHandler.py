@@ -51,11 +51,15 @@ def sendGraph():
             {"cNumber": 100, "category": 1, "name": "B"},
             {"cNumber": 80, "category": 2, "name": "C"},
             {"cNumber": 80, "category": 2, "name": "D"},
+            {"cNumber": 80, "category": 3, "name": "E"},
+            {"cNumber": 80, "category": 3, "name": "F"},
         ],
         "links": [
             {"name": "TO", "source": "B", "target": "A"},
             {"name": "TO", "source": "C", "target": "B"},
             {"name": "TO", "source": "D", "target": "B"},
+            {"name": "TO", "source": "E", "target": "D"},
+            {"name": "TO", "source": "F", "target": "D"},
         ]
     }
     return render_template('graph_external.html', gdata = graphDataPy)

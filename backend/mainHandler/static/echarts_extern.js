@@ -10,22 +10,28 @@ var dom = document.getElementById('container');
 const color1 = '#006acc';
 const color2 = '#ff7d18';
 const color3 = '#45b97c';
+const color4 = '#000000';
  
 data.nodes.forEach(node => {
   if (node.category === 0) {
-    node.symbolSize = 70;
+    node.symbolSize = 80;
     node.itemStyle = {
       color: color1
     };
   } else if (node.category === 1) {
-    node.symbolSize = 50;
+    node.symbolSize = 60;
     node.itemStyle = {
       color: color2
     };
   } else if (node.category === 2) {
-    node.symbolSize = 30;
+    node.symbolSize = 40;
     node.itemStyle = {
       color: color3
+    };
+  } else if (node.category ===3) {
+    node.symbolSize = 20;
+    node.itemStyle = {
+      color: color4
     };
   }
   node.symbolSize = node.symbolSize + node.cNumber/1000
@@ -40,24 +46,12 @@ data.links.forEach(link => {
  
 });
  
-let categories = [{
-    name: '层级1',
-    itemStyle: {
-        color: color1
-    }
-  },
-  {
-    name: '层级2',
-    itemStyle: {
-        color: color2
-    }
-},
-{
-    name: '层级3',
-    itemStyle: {
-        color: color3
-    }
-}]
+let categories = [
+  { name: 'I', itemStyle: {color: color1}},
+  { name: 'II', itemStyle: {color: color2}},
+  { name: 'III', itemStyle: {color: color3}},
+  { name: 'IV', itemStyle: {color: color4}},
+]
  
 option = {
 	title: {text: 'Data Captured From External Python Source',},
