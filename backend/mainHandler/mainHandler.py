@@ -45,15 +45,20 @@ def root():
 
 @app.route('/graph')
 def sendGraph():
-    data = {
+    graphDataPy = {
         "nodes": [
-            {"cNumber": 114, "category": 0, "name": "A"},
+            {"cNumber": 120, "category": 0, "name": "A"},
+            {"cNumber": 100, "category": 1, "name": "B"},
+            {"cNumber": 80, "category": 2, "name": "C"},
+            {"cNumber": 80, "category": 2, "name": "D"},
         ],
         "links": [
             {"name": "TO", "source": "B", "target": "A"},
+            {"name": "TO", "source": "C", "target": "B"},
+            {"name": "TO", "source": "D", "target": "B"},
         ]
     }
-    return render_template('graph-simple-external.html', gdata = data)
+    return render_template('graph_external.html', gdata = graphDataPy)
 
 @app.route('/send_echarts_js')
 def send_echarts_js():
