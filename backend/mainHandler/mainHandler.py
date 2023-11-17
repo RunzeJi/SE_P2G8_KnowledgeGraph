@@ -1,6 +1,5 @@
 import sys
 from flask import Flask, request, render_template, redirect, url_for
-from neo4j import GraphDatabase
 
 sys.path.append('../backend/loginHandler/')
 
@@ -46,20 +45,31 @@ def root():
 
 @app.route('/graph')
 def sendGraph():
-    return render_template('graph-simple-external.html')
+    data = {
+        "nodes": [
+            {"cNumber": 114, "category": 0, "name": "A"},
+        ],
+        "links": [
+            {"name": "TO", "source": "B", "target": "A"},
+        ]
+    }
+    return render_template('graph-simple-external.html', gdata = data)
 
 @app.route('/send_echarts_js')
 def send_echarts_js():
-    return app.send_static_file('echarts.js')
+    return app.send_static_file('echarts_working.js')
 
 @app.route('/send_login_stat')
 def send_login_status():
     return app.send_static_file('loginSuccess.js')
 
+@app.route('/send_graph_raw_data')
+def send_graph_raw_data():
+    return app.send_static_file('graphRawData.js')
+
 @app.route('/nav')
 def nav():
     return render_template('nav.html')
-
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8000)

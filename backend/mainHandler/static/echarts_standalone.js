@@ -5,7 +5,51 @@ var dom = document.getElementById('container');
     });
     var app = {};
     var option;
-	let data = graphDataFromFlask;
+	let data = 
+	{
+		nodes: 
+  		[
+			{
+				"cNumber": 114,
+				"category": 0,
+				"name": "A"
+			},
+			{
+				"cNumber": 114,
+				"category": 1,
+				"name": "B"
+			},
+			{
+				"cNumber": 114,
+				"category": 2,
+				"name": "C"
+			},
+			{
+				"cNumber": 114,
+				"category": 2,
+				"name": "D"
+			},
+    	],
+
+		links:
+		[
+			{
+				"name": "TO",
+				"source": "B",
+				"target": "A"
+			},
+			{
+				"name": "TO",
+				"source": "C",
+				"target": "B"
+			},
+			{
+				"name": "TO",
+				"source": "D",
+				"target": "B"
+			},
+		],
+	};
  
 const color1 = '#006acc';
 const color2 = '#ff7d18';
@@ -60,7 +104,7 @@ let categories = [{
 }]
  
 option = {
-	title: {text: 'Data Captured From External Python Source',},
+	title: {text: 'Knowledge Graph',},
 	legend: [{
     data: categories.map(x => x.name),
   }],
