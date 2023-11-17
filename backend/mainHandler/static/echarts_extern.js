@@ -10,7 +10,7 @@ var dom = document.getElementById('container');
 const color1 = '#006acc';
 const color2 = '#ff7d18';
 const color3 = '#45b97c';
-const color4 = '#000000';
+const color4 = '#0f0f0f';
  
 data.nodes.forEach(node => {
   if (node.category === 0) {
