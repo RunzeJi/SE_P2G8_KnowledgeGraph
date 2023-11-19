@@ -47,19 +47,31 @@ def root():
 def sendGraph():
     graphDataPy = {
         "nodes": [
-            {"cNumber": 120, "category": 0, "name": "A"},
-            {"cNumber": 100, "category": 1, "name": "B"},
-            {"cNumber": 80, "category": 2, "name": "C"},
-            {"cNumber": 80, "category": 2, "name": "D"},
-            {"cNumber": 80, "category": 3, "name": "E"},
-            {"cNumber": 80, "category": 3, "name": "F"},
+            {"cNumber": 120, "category": 0, "name": "A1"},
+            {"cNumber": 120, "category": 0, "name": "A2"},
+            {"cNumber": 100, "category": 1, "name": "B1"},
+            {"cNumber": 100, "category": 1, "name": "B2"},
+            {"cNumber": 80, "category": 2, "name": "C1"},
+            {"cNumber": 80, "category": 2, "name": "D1"},
+            {"cNumber": 80, "category": 3, "name": "E1"},
+            {"cNumber": 80, "category": 3, "name": "F1"},
+            {"cNumber": 80, "category": 2, "name": "C2"},
+            {"cNumber": 80, "category": 2, "name": "D2"},
+            {"cNumber": 80, "category": 3, "name": "E2"},
+            {"cNumber": 80, "category": 3, "name": "F2"},
         ],
         "links": [
-            {"name": "TO", "source": "B", "target": "A"},
-            {"name": "TO", "source": "C", "target": "B"},
-            {"name": "TO", "source": "D", "target": "B"},
-            {"name": "TO", "source": "E", "target": "D"},
-            {"name": "TO", "source": "F", "target": "D"},
+            {"name": "TO", "source": "B1", "target": "A1"},
+            {"name": "TO", "source": "C1", "target": "B1"},
+            {"name": "TO", "source": "D1", "target": "B1"},
+            {"name": "TO", "source": "E1", "target": "D1"},
+            {"name": "TO", "source": "F1", "target": "D1"},
+            {"name": "TO", "source": "B2", "target": "A2"},
+            {"name": "TO", "source": "C2", "target": "B2"},
+            {"name": "TO", "source": "D2", "target": "B2"},
+            {"name": "TO", "source": "E2", "target": "D2"},
+            {"name": "TO", "source": "F2", "target": "D2"},
+            {"name": "TO", "source": "F2", "target": "D1"},
         ]
     }
     return render_template('graph_external.html', gdata = graphDataPy)
