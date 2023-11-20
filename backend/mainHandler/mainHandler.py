@@ -1,5 +1,5 @@
 import sys
-from flask import Flask, request, render_template, redirect, url_for
+from flask import Flask, request, render_template, redirect, url_for, jsonify
 
 sys.path.append('../SE_P2G8_KnowledgeGraph/backend/')
 
@@ -20,11 +20,13 @@ def login_clicked():
     print(f'login_password={login_password}')
 
     userCredential = [login_username, login_password]
-    login_success = True
-    if login_success:
-        return redirect('http://localhost:8000/home', code=302)
-    else:
-        return redirect(url_for('login'), code=302)
+    login_success = False
+    if login_success == True:
+        return jsonify({'redirect_url': url_for('nav')})
+        #return redirect(url_for('home'), code=302)
+    elif login_success == False:
+        #return redirect(url_for('login'), code=302)
+        return jsonify({'redirect_url': url_for('login')})
 
 @app.route('/signup')
 def signup():
