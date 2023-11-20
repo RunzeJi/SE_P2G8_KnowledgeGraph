@@ -8,6 +8,10 @@ from loginHandler import authHelper
 
 app = Flask(__name__)
 
+@app.route('/')
+def root():
+    return render_template('root.html')
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     return render_template('login.html')
@@ -48,10 +52,6 @@ def signup_clicked():
 @app.route('/home')
 def home():
     return render_template('main.html')
-
-@app.route('/root')
-def root():
-    return render_template('root.html')
 
 @app.route('/graph')
 def sendGraph():
