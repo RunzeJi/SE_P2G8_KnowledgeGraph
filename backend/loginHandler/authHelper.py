@@ -5,11 +5,11 @@ credentialsDict = {"username":"password",
                    "admin":"password"} 
 
 def addUser(username='', password=''):
-    driver = GraphDatabase.driver("bolt://localhost:7687", auth=("neo4j", "password"))
-    with driver.session() as session:
+    sudoDriver = GraphDatabase.driver("bolt://localhost:7687", auth=("neo4j", "password"))
+    with sudoDriver.session() as session:
         session.run("CREATE (n:User {name: $name, password: $password})", name=username, password=password)
     print(f'created new user:[{username}, {password}]')
-    driver.close()
+    sudoDriver.close()
     return 0
  
 def addCredentials(credentialsDict):

@@ -2,6 +2,9 @@ import sys
 from flask import Flask, request, render_template, redirect, url_for
 
 sys.path.append('../backend/loginHandler/')
+sys.path.append('../backend/db_manipulate/')
+
+from loginHandler import authHelper
 
 app = Flask(__name__)
 
@@ -33,6 +36,9 @@ def signup_clicked():
     sign_up_password = request.form.get('password_input')
     print(f'signup_username={sign_up_username}')
     print(f'signup_password={sign_up_password}')
+    
+    # Creates Corresponding Neo4j Database User
+    authHelper.addUser(sign_up_username, sign_up_password) # loginHandler
     return redirect(url_for('login'))
 
 @app.route('/home')
