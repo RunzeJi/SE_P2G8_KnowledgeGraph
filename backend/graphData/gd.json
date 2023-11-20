@@ -1,0 +1,41 @@
+{
+    "nodes": [
+        {
+            "cNumber": 300,
+            "category": 0,
+            "name": "SampleDataNode0"
+        },
+        {
+            "cNumber": 220,
+            "category": 1,
+            "name": "SampleDataNode1"
+        },
+        {
+            "cNumber": 150,
+            "category": 2,
+            "name": "SampleDataNode2"
+        },
+        {
+            "cNumber": 80,
+            "category": 3,
+            "name": "SampleDataNode3"
+        }
+    ],
+    "links": [
+        {
+            "name": "TO",
+            "source": "SampleDataNode1",
+            "target": "SampleDataNode0"
+        },
+        {
+            "name": "TO",
+            "source": "SampleDataNode2",
+            "target": "SampleDataNode1"
+        },
+        {
+            "name": "TO",
+            "source": "SampleDataNode3",
+            "target": "SampleDataNode2"
+        }
+    ]
+}

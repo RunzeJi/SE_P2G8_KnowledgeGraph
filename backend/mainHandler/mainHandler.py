@@ -1,9 +1,9 @@
 import sys
 from flask import Flask, request, render_template, redirect, url_for
 
-sys.path.append('../backend/loginHandler/')
-sys.path.append('../backend/db_manipulate/')
+sys.path.append('../SE_P2G8_KnowledgeGraph/backend/')
 
+from graphData import gd
 from loginHandler import authHelper
 
 app = Flask(__name__)
@@ -36,9 +36,7 @@ def signup_clicked():
     sign_up_password = request.form.get('password_input')
     print(f'signup_username={sign_up_username}')
     print(f'signup_password={sign_up_password}')
-    
-    # Creates Corresponding Neo4j Database User
-    authHelper.addUser(sign_up_username, sign_up_password) # loginHandler
+    authHelper.addUser(sign_up_username, sign_up_password)
     return redirect(url_for('login'))
 
 @app.route('/home')
@@ -51,35 +49,7 @@ def root():
 
 @app.route('/graph')
 def sendGraph():
-    graphDataPy = {
-        "nodes": [
-            {"cNumber": 120, "category": 0, "name": "A1"},
-            {"cNumber": 120, "category": 0, "name": "A2"},
-            {"cNumber": 100, "category": 1, "name": "B1"},
-            {"cNumber": 100, "category": 1, "name": "B2"},
-            {"cNumber": 80, "category": 2, "name": "C1"},
-            {"cNumber": 80, "category": 2, "name": "D1"},
-            {"cNumber": 80, "category": 3, "name": "E1"},
-            {"cNumber": 80, "category": 3, "name": "F1"},
-            {"cNumber": 80, "category": 2, "name": "C2"},
-            {"cNumber": 80, "category": 2, "name": "D2"},
-            {"cNumber": 80, "category": 3, "name": "E2"},
-            {"cNumber": 80, "category": 3, "name": "F2"},
-        ],
-        "links": [
-            {"name": "TO", "source": "B1", "target": "A1"},
-            {"name": "TO", "source": "C1", "target": "B1"},
-            {"name": "TO", "source": "D1", "target": "B1"},
-            {"name": "TO", "source": "E1", "target": "D1"},
-            {"name": "TO", "source": "F1", "target": "D1"},
-            {"name": "TO", "source": "B2", "target": "A2"},
-            {"name": "TO", "source": "C2", "target": "B2"},
-            {"name": "TO", "source": "D2", "target": "B2"},
-            {"name": "TO", "source": "E2", "target": "D2"},
-            {"name": "TO", "source": "F2", "target": "D2"},
-            {"name": "TO", "source": "F2", "target": "D1"},
-        ]
-    }
+    graphDataPy = gd.readGD()
     return render_template('graph_external.html', gdata = graphDataPy)
 
 @app.route('/send_echarts_js')
