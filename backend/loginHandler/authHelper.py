@@ -4,7 +4,7 @@ from neo4j import GraphDatabase, basic_auth
 credentialsDict = {"username":"password",
                    "admin":"password"} 
 
-def addUser(username='', password=''):
+def addUser(username='', password=''): # Working
     sudoDriver = GraphDatabase.driver("bolt://localhost:7687/neo4j", auth=("neo4j", "sudoDriver"))
     try:
         with sudoDriver.session() as session:
