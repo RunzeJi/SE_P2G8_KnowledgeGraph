@@ -20,13 +20,17 @@ def login_clicked():
     print(f'login_password={login_password}')
 
     userCredential = [login_username, login_password]
-    login_success = False
+    login_success = authHelper.detectLogin(userCredential[0], userCredential[1])
     if login_success == True:
         return jsonify({'redirect_url': url_for('nav')})
         #return redirect(url_for('home'), code=302)
     elif login_success == False:
         #return redirect(url_for('login'), code=302)
         return jsonify({'redirect_url': url_for('login')})
+
+@app.route('/login_failed')
+def login_failed():
+    return render_template('loginFail.html')
 
 @app.route('/signup')
 def signup():

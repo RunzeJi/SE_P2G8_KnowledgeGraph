@@ -3,6 +3,7 @@ from neo4j import GraphDatabase, basic_auth
 
 credentialsDict = {"username":"password",
                    "admin":"password"} 
+userlist_path = "../SE_P2G8_KnowledgeGraph/backend/db_manipulate/userList.json"
 
 def addUser(username='', password=''): # Working
     sudoDriver = GraphDatabase.driver("bolt://localhost:7687/neo4j", auth=("neo4j", "sudoDriver"))
@@ -15,7 +16,17 @@ def addUser(username='', password=''): # Working
     except Exception as e:
         print(e)
 
-
+def detectLogin(user, password): # Working
+    with open(userlist_path, 'r') as f:
+        userDict = json.loads(f.read())
+        print(userDict)
+        if password == userDict[user]:
+            print(f"\n{user} ==> Login Success\n")
+            return True
+        else:
+            print(f"\n{user} ==> Login Failed\n")
+            return False
+        
 
 def addCredentials(credentialsDict):
     with open('credentials.json', 'a') as f:
@@ -29,4 +40,6 @@ def deleteCredentials(credentialsDict, delName):
         json.dump(credentialsDict, f)
 
 if __name__ == "__main__":
-    addUser('niggass', 'password')
+    #addUser('niggass', 'password')
+    print(detectLogin('admin', 'password'))
+    
