@@ -26,7 +26,7 @@ def login_clicked():
         #return redirect(url_for('home'), code=302)
     elif login_success == False:
         #return redirect(url_for('login'), code=302)
-        return jsonify({'redirect_url': url_for('login')})
+        return jsonify({'redirect_url': url_for('login_failed')})
 
 @app.route('/login_failed')
 def login_failed():

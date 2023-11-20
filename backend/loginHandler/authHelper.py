@@ -20,12 +20,17 @@ def detectLogin(user, password): # Working
     with open(userlist_path, 'r') as f:
         userDict = json.loads(f.read())
         print(userDict)
-        if password == userDict[user]:
-            print(f"\n{user} ==> Login Success\n")
-            return True
-        else:
-            print(f"\n{user} ==> Login Failed\n")
-            return False
+        try:
+            if password == userDict[user]:
+                print(f"\n{user} ==> Login Success\n")
+                return True
+            else:
+                print(f"\n{user} ==> Login Failed\n")
+                return False
+        except KeyError as e:
+            if e != 0:
+                print(f"\n{user} ==> Login Failed\n")
+                return False
         
 
 def addCredentials(credentialsDict):
