@@ -10,7 +10,7 @@ var dom = document.getElementById('container');
 const color1 = '#006acc';
 const color2 = '#ff7d18';
 const color3 = '#45b97c';
-const color4 = '#0f0f0f';
+const color4 = '#f01111';
  
 data.nodes.forEach(node => {
   if (node.category === 0) {
@@ -84,7 +84,7 @@ option = {
         show: true
     },
     force: {
-      repulsion: 2000,
+      repulsion: 1500,
       edgeLength: 120
     },
     data: data.nodes,

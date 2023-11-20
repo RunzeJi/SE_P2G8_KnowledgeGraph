@@ -1,24 +1,84 @@
 {
     "nodes": [
         {
-            "cNumber": 300,
+            "cNumber": 3000,
             "category": 0,
             "name": "SampleDataNode0"
         },
         {
-            "cNumber": 220,
+            "cNumber": 2800,
             "category": 1,
             "name": "SampleDataNode1"
         },
         {
-            "cNumber": 150,
+            "cNumber": 2600,
             "category": 2,
             "name": "SampleDataNode2"
         },
         {
-            "cNumber": 80,
+            "cNumber": 2400,
             "category": 3,
             "name": "SampleDataNode3"
+        },
+        {
+            "cNumber": 120,
+            "category": 0,
+            "name": "A1"
+        },
+        {
+            "cNumber": 120,
+            "category": 0,
+            "name": "A2"
+        },
+        {
+            "cNumber": 100,
+            "category": 1,
+            "name": "B1"
+        },
+        {
+            "cNumber": 100,
+            "category": 1,
+            "name": "B2"
+        },
+        {
+            "cNumber": 80,
+            "category": 2,
+            "name": "C1"
+        },
+        {
+            "cNumber": 80,
+            "category": 2,
+            "name": "D1"
+        },
+        {
+            "cNumber": 80,
+            "category": 3,
+            "name": "E1"
+        },
+        {
+            "cNumber": 80,
+            "category": 3,
+            "name": "F1"
+        },
+        {
+            "cNumber": 80,
+            "category": 2,
+            "name": "C2"
+        },
+        {
+            "cNumber": 80,
+            "category": 2,
+            "name": "D2"
+        },
+        {
+            "cNumber": 80,
+            "category": 3,
+            "name": "E2"
+        },
+        {
+            "cNumber": 80,
+            "category": 3,
+            "name": "F2"
         }
     ],
     "links": [
@@ -36,6 +96,61 @@
             "name": "TO",
             "source": "SampleDataNode3",
             "target": "SampleDataNode2"
+        },
+        {
+            "name": "TO",
+            "source": "B1",
+            "target": "A1"
+        },
+        {
+            "name": "TO",
+            "source": "C1",
+            "target": "B1"
+        },
+        {
+            "name": "TO",
+            "source": "D1",
+            "target": "B1"
+        },
+        {
+            "name": "TO",
+            "source": "E1",
+            "target": "D1"
+        },
+        {
+            "name": "TO",
+            "source": "F1",
+            "target": "D1"
+        },
+        {
+            "name": "TO",
+            "source": "B2",
+            "target": "A2"
+        },
+        {
+            "name": "TO",
+            "source": "C2",
+            "target": "B2"
+        },
+        {
+            "name": "TO",
+            "source": "D2",
+            "target": "B2"
+        },
+        {
+            "name": "TO",
+            "source": "E2",
+            "target": "D2"
+        },
+        {
+            "name": "TO",
+            "source": "F2",
+            "target": "D2"
+        },
+        {
+            "name": "TO",
+            "source": "F2",
+            "target": "D1"
         }
     ]
 }
