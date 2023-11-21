@@ -56,7 +56,7 @@ def home():
 @app.route('/graph')
 def sendGraph():
     graphDataPy = gd.readGD()
-    return render_template('graph_external.html', gdata = graphDataPy)
+    return render_template('graph_extern.html', gdata = graphDataPy)
 
 @app.route('/send_echarts_js')
 def send_echarts_js():

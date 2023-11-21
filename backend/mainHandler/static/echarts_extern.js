@@ -1,4 +1,4 @@
-var dom = document.getElementById('container');
+var dom = document.getElementById('mainNavContainerDiv');
     var myChart = echarts.init(dom, null, {
       renderer: 'canvas',
       useDirtyRect: false
