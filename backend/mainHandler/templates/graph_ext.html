@@ -57,10 +57,10 @@
                 <!--Brand logo & name-->
                 <!--================================-->
                 <div class="navbar-header">
-                    <a href="{{ url_for('nav') }}" class="navbar-brand">
+                    <a href="{{ url_for('index') }}" class="navbar-brand">
                         <img src="../static/images/logo.jpg" alt="Nifty Logo" class="brand-icon">
                         <div class="brand-title">
-                            <span class="brand-text">软件工程</span>
+                            <span class="brand-text" style="text-align: center;">Graphy</span>
                         </div>
                     </a>
                 </div>
@@ -140,7 +140,7 @@
                         
                                     <!--Menu list item-->
                                    <li>
-                                        <a href="{{ url_for('nav') }}">
+                                        <a href="{{ url_for('search') }}">
                                             <i class="fa fa-search" style="width:24px"></i>
                                             <span class="menu-title">
                                                 <strong>检索</strong>
@@ -150,7 +150,7 @@
 
                                     </li>
                                     <li>
-                                        <a href="{{ url_for('nav') }}">
+                                        <a href="{{ url_for('graph') }}">
                                             <i class="fa fa-pie-chart" style="width:24px"></i>
                                             <span class="menu-title">
                                                 <strong>关系全貌</strong>
@@ -168,7 +168,7 @@
 						
 						            <!--Menu list item-->
 						            <li >
-						                <a href="{{ url_for('login') }}">
+						                <a href="{{ url_for('qna') }}">
 						                    <i class="fa fa-question-circle" style="width:24px"></i>
 						                    <span class="menu-title">关系问答</span>
 											

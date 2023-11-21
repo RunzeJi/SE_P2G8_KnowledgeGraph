@@ -26,7 +26,7 @@ def login_clicked():
     userCredential = [login_username, login_password]
     login_success = authHelper.detectLogin(userCredential[0], userCredential[1])
     if login_success == True:
-        return jsonify({'redirect_url': url_for('nav')})
+        return jsonify({'redirect_url': url_for('graph')})
         #return redirect(url_for('home'), code=302)
     elif login_success == False:
         #return redirect(url_for('login'), code=302)
@@ -53,10 +53,18 @@ def signup_clicked():
 def home():
     return render_template('main.html')
 
+@app.route('/index')
+def index():
+    return render_template('index.html')
+
+@app.route('/search')
+def search():
+    return render_template('search.html')
+
 @app.route('/graph')
-def sendGraph():
+def graph():
     graphDataPy = gd.readGD()
-    return render_template('graph_extern.html', gdata = graphDataPy)
+    return render_template('graph_ext.html', gdata = graphDataPy)
 
 @app.route('/send_echarts_js')
 def send_echarts_js():
@@ -77,6 +85,10 @@ def nav():
 @app.route('/admin')
 def admin():
     return render_template('admin.html')
+
+@app.route('/qna')
+def qna():
+    return render_template('qna.html')
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8000)
