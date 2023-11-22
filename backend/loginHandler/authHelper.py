@@ -1,5 +1,5 @@
 import json, os, sys
-from neo4j import GraphDatabase, basic_auth
+from neo4j import GraphDatabase, basic_auth, exceptions
 
 credentialsDict = {"username":"password",
                    "admin":"password"} 
@@ -9,7 +9,7 @@ def addUser(username='', password=''): # Working
     sudoDriver = GraphDatabase.driver("bolt://localhost:7687/neo4j", auth=("neo4j", "sudoDriver"))
     try:
         with sudoDriver.session() as session:
-            session.run(f"CREATE USER {username} SET PASSWORD '{password}'")
+            session.run(f"CREATE USER {username} SET PASSWORD '{password}' CHANGE NOT REQUIRED")
             #session.run(f"ALTER USER {username} SET PASSWORD '{password}'")
             print(f'created new user:[{username}, {password}]')
             sudoDriver.close()
@@ -23,7 +23,13 @@ def detectLogin(user, password): # Working
         try:
             if password == userDict[user]:
                 print(f"\n{user} ==> Login Success\n")
-                return True
+                try:
+                    userDriver = GraphDatabase.driver("bolt://localhost:7687/neo4j", auth=(user, password))
+                    print(f"sudoDriver connected as {user}\n")
+                    return True
+                except exceptions as e:
+                    print(e)
+                    return False
             else:
                 print(f"\n{user} ==> Login Failed\n")
                 return False
@@ -31,8 +37,8 @@ def detectLogin(user, password): # Working
             if e != 0:
                 print(f"\n{user} ==> Login Failed\n")
                 return False
-        
 
+###########################################################################
 def addCredentials(credentialsDict):
     with open('credentials.json', 'a') as f:
         json.dump(credentialsDict, f)
