@@ -26,7 +26,7 @@ def login_clicked():
     userCredential = [login_username, login_password]
     login_success = authHelper.detectLogin(userCredential[0], userCredential[1])
     if login_success == True:
-        return jsonify({'redirect_url': url_for('graph')})
+        return jsonify({'redirect_url': url_for('index')})
         #return redirect(url_for('home'), code=302)
     elif login_success == False:
         #return redirect(url_for('login'), code=302)
