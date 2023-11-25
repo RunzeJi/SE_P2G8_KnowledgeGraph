@@ -1,14 +1,14 @@
 {
     "nodes": [
         {
-            "cNumber": 100,
-            "category": 1,
-            "name": "B2"
+            "cNumber": 2400,
+            "category": 3,
+            "name": "SampleDataNode3"
         },
         {
-            "cNumber": 100,
-            "category": 1,
-            "name": "B1"
+            "cNumber": 80,
+            "category": 3,
+            "name": "F1"
         },
         {
             "cNumber": 80,
@@ -16,19 +16,49 @@
             "name": "E2"
         },
         {
+            "cNumber": 120,
+            "category": 0,
+            "name": "A1"
+        },
+        {
+            "cNumber": 120,
+            "category": 0,
+            "name": "A2"
+        },
+        {
+            "cNumber": 1145,
+            "category": 0,
+            "name": "stink"
+        },
+        {
+            "cNumber": 2600,
+            "category": 2,
+            "name": "SampleDataNode2"
+        },
+        {
             "cNumber": 1145,
             "category": 0,
             "name": "bad"
         },
         {
-            "cNumber": 80,
-            "category": 2,
-            "name": "D2"
+            "cNumber": 2800,
+            "category": 1,
+            "name": "SampleDataNode1"
         },
         {
             "cNumber": 80,
-            "category": 3,
-            "name": "E1"
+            "category": 2,
+            "name": "D1"
+        },
+        {
+            "cNumber": 100,
+            "category": 1,
+            "name": "B1"
+        },
+        {
+            "cNumber": 3000,
+            "category": 0,
+            "name": "SampleDataNode0"
         },
         {
             "cNumber": 1145,
@@ -41,19 +71,9 @@
             "name": "C1"
         },
         {
-            "cNumber": 120,
-            "category": 0,
-            "name": "A2"
-        },
-        {
             "cNumber": 80,
             "category": 3,
-            "name": "F1"
-        },
-        {
-            "cNumber": 2400,
-            "category": 3,
-            "name": "SampleDataNode3"
+            "name": "E1"
         },
         {
             "cNumber": 80,
@@ -61,19 +81,9 @@
             "name": "F2"
         },
         {
-            "cNumber": 1000,
-            "category": 0,
-            "name": "sad"
-        },
-        {
-            "cNumber": 2600,
+            "cNumber": 80,
             "category": 2,
-            "name": "SampleDataNode2"
-        },
-        {
-            "cNumber": 1145,
-            "category": 0,
-            "name": "stink"
+            "name": "D2"
         },
         {
             "cNumber": 80,
@@ -81,46 +91,21 @@
             "name": "C2"
         },
         {
-            "cNumber": 120,
+            "cNumber": 1000,
             "category": 0,
-            "name": "A1"
+            "name": "sad"
         },
         {
-            "cNumber": 80,
-            "category": 2,
-            "name": "D1"
-        },
-        {
-            "cNumber": 2800,
+            "cNumber": 100,
             "category": 1,
-            "name": "SampleDataNode1"
-        },
-        {
-            "cNumber": 3000,
-            "category": 0,
-            "name": "SampleDataNode0"
+            "name": "B2"
         }
     ],
     "links": [
         {
             "name": "TO",
-            "source": "sad",
-            "target": "bad"
-        },
-        {
-            "name": "TO",
-            "source": "default node",
-            "target": "sad"
-        },
-        {
-            "name": "TO",
-            "source": "SampleDataNode3",
-            "target": "SampleDataNode2"
-        },
-        {
-            "name": "TO",
-            "source": "D1",
-            "target": "B1"
+            "source": "F2",
+            "target": "D1"
         },
         {
             "name": "TO",
@@ -129,8 +114,43 @@
         },
         {
             "name": "TO",
+            "source": "F2",
+            "target": "D2"
+        },
+        {
+            "name": "TO",
             "source": "sad",
-            "target": "stink"
+            "target": "bad"
+        },
+        {
+            "name": "TO",
+            "source": "SampleDataNode1",
+            "target": "SampleDataNode0"
+        },
+        {
+            "name": "TO",
+            "source": "C2",
+            "target": "B2"
+        },
+        {
+            "name": "TO",
+            "source": "default node",
+            "target": "sad"
+        },
+        {
+            "name": "TO",
+            "source": "D1",
+            "target": "B1"
+        },
+        {
+            "name": "TO",
+            "source": "C1",
+            "target": "B1"
+        },
+        {
+            "name": "TO",
+            "source": "SampleDataNode3",
+            "target": "SampleDataNode2"
         },
         {
             "name": "TO",
@@ -144,8 +164,13 @@
         },
         {
             "name": "TO",
-            "source": "F2",
-            "target": "D1"
+            "source": "default node",
+            "target": "A1"
+        },
+        {
+            "name": "TO",
+            "source": "sad",
+            "target": "stink"
         },
         {
             "name": "TO",
@@ -154,23 +179,8 @@
         },
         {
             "name": "TO",
-            "source": "F1",
-            "target": "D1"
-        },
-        {
-            "name": "TO",
             "source": "E2",
             "target": "D2"
-        },
-        {
-            "name": "TO",
-            "source": "C1",
-            "target": "B1"
-        },
-        {
-            "name": "TO",
-            "source": "SampleDataNode1",
-            "target": "SampleDataNode0"
         },
         {
             "name": "TO",
@@ -179,18 +189,8 @@
         },
         {
             "name": "TO",
-            "source": "C2",
-            "target": "B2"
-        },
-        {
-            "name": "TO",
-            "source": "default node",
-            "target": "A1"
-        },
-        {
-            "name": "TO",
-            "source": "F2",
-            "target": "D2"
+            "source": "F1",
+            "target": "D1"
         }
     ]
 }

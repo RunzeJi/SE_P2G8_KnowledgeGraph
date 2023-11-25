@@ -8,6 +8,7 @@ from loginHandler import authHelper
 
 app = Flask(__name__)
 
+## 以下定义Web App 的 endpoints 和 routes
 @app.route('/')
 def root():
     return render_template('root.html')
@@ -16,7 +17,7 @@ def root():
 def login():
     return render_template('login.html')
 
-@app.route('/login_clicked', methods=['POST'])
+@app.route('/login_clicked', methods=['POST']) ## 用于处理点击登录的动作（调用authHelper.py）
 def login_clicked():
     login_username = request.form.get('username_input')
     login_password = request.form.get('password_input')
@@ -40,7 +41,7 @@ def login_failed():
 def signup():
     return render_template('signup.html')
 
-@app.route('/signup_clicked', methods=['POST'])
+@app.route('/signup_clicked', methods=['POST']) ## 用于处理点击注册的动作（在neo4j中同步创建用户，调用authHelper.py）
 def signup_clicked():
     sign_up_username = request.form.get('username_input')
     sign_up_password = request.form.get('password_input')
@@ -61,7 +62,7 @@ def index():
 def search():
     return render_template('search.html')
 
-@app.route('/graph')
+@app.route('/graph') # 用于处理储存的图表JSON数据并传递至前端
 def graph():
     graphDataPy = gd.readGD()
     return render_template('graph_ext.html', gdata = graphDataPy)

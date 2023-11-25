@@ -1,4 +1,4 @@
-import py2neo
+import neo4j
 
 class node:
     def __init__(self,label,property,relationship,nodeOfRelation=""):
@@ -23,7 +23,7 @@ class node:
         return "CREATE (:" + self.label + " {" + self.property + "})"
 
 
-n1 = node("Person", "name: 'Alice'", "Fucks", "Nigger")
-n1.addProperty("dicksize", "32")
+n1 = node("Person", "name: 'Alice'", "eats", "apple")
+n1.addProperty("amount_of_apples", "32")
 
 print(n1.command())
