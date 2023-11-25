@@ -96,6 +96,7 @@
     
     ## II. 代码文件目录：
         backend                    存放flask、数据库操作、软件登陆等后端逻辑。
+        |
         |-- db_manipulate          存放Neo4j数据库相关Driver函数。
         |   |-- db_account.py      用于Neo4j账户操作
         |   |-- db_writeNode.py    用于Neo4j数据库节点控制
@@ -117,6 +118,11 @@
         |   |   |-- js             
         |   |
         |   |-- templates          存放 HTML 文件
+        |
+        |-- py2neo
+            |-- classNode          用于构建Node结构体
+            |-- neoManipulate      用于操作Neo4j数据库
+
 
     ## III. 第三方库：
         Python库：
