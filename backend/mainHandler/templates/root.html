@@ -1,19 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROOT</title>
+    <title>Yuanshenqidong</title>
 </head>
 <body>
-    <a href="http://localhost:8000/login">
-        <button style="size: 50mm;">
-            LOGIN
-        </button>
-    </a>
-    <a href="http://localhost:8000/admin">
-        <button style="size: 20mm;">
-            ADMIN
-        </button>
-    </a>
+    <video src="../static/launch.mp4" id="homeVideo" title="video" webkit-playsinline="true" playsinline="true" style="width: 100%; height: 100%;" autoplay="muted">
+    </video>
+    <div>
+        <header id="header01">
+            
+        </header>
+    </div>
+    <script>
+        var homeVideo = document.getElementById('homeVideo');
+        
+        // Add an event listener for the 'loadedmetadata' event
+        homeVideo.addEventListener('click', function() {
+            // Play the video
+            homeVideo.play();
+            // After metadata is loaded, remove the 'muted' attribute
+            homeVideo.removeAttribute('muted');
+        });
+
+        homeVideo.addEventListener('ended',function(){
+            window.location.href = 'http://localhost:8000/login';
+            
+
+        });
+
+    </script>
 </body>

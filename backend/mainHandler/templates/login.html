@@ -4,31 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Graphy</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+    <link rel="stylesheet" type="text/css" href="../static/login.css">
 </head>
 <body>
-    <img src="{{ url_for('static', filename='homepage.jpg') }}" width="100%"/>
-    <h1 style="text-align: center;">欢迎使用Graphy</h1>
-    <p style="text-align: center;">请输入用户名和密码进行登录：</p>
-    <div id="loginCredentialsContainer" class="container">
+    <h1 style="text-align: center; color: white;">欢迎使用Graphy</h1>
+    <p style="text-align: center; color: white;">请输入用户名和密码进行登录：</p>
+    <div class="container" id="loginCredentialsContainer">
         <div>
-            <h1 style="text-align: center;">登录</h1>
+            <h1 style="text-align: center; color: white;">登录</h1>
         </div>
         <div class="main">
             <form id="credentialsForm">
-               <span>
-                   <input id="usernameInput" type="text" placeholder="账号">
-               </span><br>
+                <span>
+                    <input id="usernameInput" type="text" placeholder="账号">
+                </span><br>
 
-               <span>
-                   <input id="passwordInput" type="password" placeholder="密码">
-               </span><br>
-               <button id="loginButton" type="button">登录</button>
-       
+                <span>
+                    <input id="passwordInput" type="password" placeholder="密码">
+                </span><br>
+                <button id="loginButton" type="button">登录</button>
+                <div id="signup">
+                  <a href="http://localhost:8000/signup" id="signupButton" style="width: 100px; text-align: center; color: white;">注册</button>
+                </div>
+                
             </form>
-           </div>
+        </div>
     </div>
-    <a href="{{ url_for('signup') }}">注册</a>
+    <!-- Move the image here, below the login controls -->
+    <!--img src="../static/images/welcome.jpg" width="100%"/-->
+    
 </body>
 
 <script>
@@ -59,7 +63,12 @@
       };
       xhr.setRequestHeader("Content-Type", "application/json");
     });
+
+    var signupButton = document.getElementById("signupButton");
     
+    signupButton.addEventListener('click', function() {
+      window.location.href = 'http://localhost:8000/signup?';
+    });
 </script>
-  
+
 </html>

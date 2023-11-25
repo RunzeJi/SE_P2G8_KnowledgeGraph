@@ -1,13 +1,21 @@
 body{
    font-family: sans-serif;
+   background-image: url("../static/images/welcome.jpg");
+   background-repeat: no-repeat;
+   background-position: top;
+   background-size: cover;
+   overflow: auto;
 }
 
 .container{
     width: 380px;
     margin: 7% auto;
     border-radius: 25px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 17px #333;
+    position: absolute;
+    top: 15%;
+    left: 55%;
 }
 
 .header{
