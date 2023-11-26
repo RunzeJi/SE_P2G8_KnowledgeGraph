@@ -50,10 +50,6 @@ def signup_clicked():
     authHelper.addUser(sign_up_username, sign_up_password)
     return redirect(url_for('login'))
 
-@app.route('/home')
-def home():
-    return render_template('main.html')
-
 @app.route('/index')
 def index():
     return render_template('index.html')
@@ -90,6 +86,23 @@ def admin():
 @app.route('/qna')
 def qna():
     return render_template('qna.html')
+
+@app.route('/add_node', methods=['POST'])
+def add_node():
+    nodeType = int(request.form.get('nodeType'))
+    nodeName = request.form.get('nodeName')
+    sourceNode = request.form.get('sourceNode')
+    relationName = request.form.get('relationName')
+    targetNode = request.form.get('targetNode')
+
+    #向gd.json添加节点信息
+    print(f'New type {nodeType} node: "{nodeName}"')
+    print(f'{sourceNode} === {relationName} ===> {targetNode}')
+
+    gd.appendGD(gd.appendNode(cNumber=3000 ,category=nodeType, name=nodeName), gd.appendLink(name=relationName, source=sourceNode, target=targetNode))
+    return redirect(url_for('qna'))
+
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8000)

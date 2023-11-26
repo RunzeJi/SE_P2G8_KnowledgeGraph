@@ -1,59 +1,84 @@
 {
     "nodes": [
         {
-            "cNumber": 2400,
+            "cNumber": 3000,
             "category": 3,
-            "name": "SampleDataNode3"
+            "name": "F2"
         },
         {
-            "cNumber": 80,
-            "category": 3,
-            "name": "F1"
-        },
-        {
-            "cNumber": 80,
-            "category": 3,
-            "name": "E2"
-        },
-        {
-            "cNumber": 120,
-            "category": 0,
-            "name": "A1"
-        },
-        {
-            "cNumber": 120,
-            "category": 0,
-            "name": "A2"
-        },
-        {
-            "cNumber": 1145,
-            "category": 0,
-            "name": "stink"
-        },
-        {
-            "cNumber": 2600,
-            "category": 2,
-            "name": "SampleDataNode2"
-        },
-        {
-            "cNumber": 1145,
-            "category": 0,
-            "name": "bad"
-        },
-        {
-            "cNumber": 2800,
+            "cNumber": 3000,
             "category": 1,
             "name": "SampleDataNode1"
         },
         {
-            "cNumber": 80,
+            "cNumber": 3000,
+            "category": 2,
+            "name": "a"
+        },
+        {
+            "cNumber": 3000,
+            "category": 2,
+            "name": "C1"
+        },
+        {
+            "cNumber": 3000,
+            "category": 3,
+            "name": "New 4th Tier Node"
+        },
+        {
+            "cNumber": 3000,
+            "category": 2,
+            "name": "SampleDataNode2"
+        },
+        {
+            "cNumber": 3000,
             "category": 2,
             "name": "D1"
         },
         {
-            "cNumber": 100,
+            "cNumber": 3000,
+            "category": 0,
+            "name": "A2"
+        },
+        {
+            "cNumber": 3000,
+            "category": 1,
+            "name": "New 2nd Tier Node"
+        },
+        {
+            "cNumber": 3000,
+            "category": 3,
+            "name": "E2"
+        },
+        {
+            "cNumber": 3000,
+            "category": 3,
+            "name": "SampleDataNode3"
+        },
+        {
+            "cNumber": 3000,
+            "category": 1,
+            "name": "B2"
+        },
+        {
+            "cNumber": 3000,
+            "category": 0,
+            "name": "New 1st Tier Node"
+        },
+        {
+            "cNumber": 3000,
+            "category": 2,
+            "name": "C2"
+        },
+        {
+            "cNumber": 3000,
             "category": 1,
             "name": "B1"
+        },
+        {
+            "cNumber": 3000,
+            "category": 3,
+            "name": "F1"
         },
         {
             "cNumber": 3000,
@@ -61,47 +86,32 @@
             "name": "SampleDataNode0"
         },
         {
-            "cNumber": 1145,
-            "category": 0,
-            "name": "default node"
-        },
-        {
-            "cNumber": 80,
-            "category": 2,
-            "name": "C1"
-        },
-        {
-            "cNumber": 80,
-            "category": 3,
-            "name": "E1"
-        },
-        {
-            "cNumber": 80,
-            "category": 3,
-            "name": "F2"
-        },
-        {
-            "cNumber": 80,
+            "cNumber": 3000,
             "category": 2,
             "name": "D2"
         },
         {
-            "cNumber": 80,
-            "category": 2,
-            "name": "C2"
-        },
-        {
-            "cNumber": 1000,
+            "cNumber": 3000,
             "category": 0,
-            "name": "sad"
+            "name": "A1"
         },
         {
-            "cNumber": 100,
-            "category": 1,
-            "name": "B2"
+            "cNumber": 3000,
+            "category": 2,
+            "name": "New 3rd Tier Node"
+        },
+        {
+            "cNumber": 3000,
+            "category": 3,
+            "name": "E1"
         }
     ],
     "links": [
+        {
+            "name": "TO",
+            "source": "New 3rd Tier Node",
+            "target": "A2"
+        },
         {
             "name": "TO",
             "source": "F2",
@@ -109,23 +119,8 @@
         },
         {
             "name": "TO",
-            "source": "B2",
-            "target": "A2"
-        },
-        {
-            "name": "TO",
-            "source": "F2",
-            "target": "D2"
-        },
-        {
-            "name": "TO",
-            "source": "sad",
-            "target": "bad"
-        },
-        {
-            "name": "TO",
-            "source": "SampleDataNode1",
-            "target": "SampleDataNode0"
+            "source": "E1",
+            "target": "D1"
         },
         {
             "name": "TO",
@@ -133,14 +128,24 @@
             "target": "B2"
         },
         {
-            "name": "TO",
-            "source": "default node",
-            "target": "sad"
+            "name": "link",
+            "source": "SampleDataNode0",
+            "target": "A1"
         },
         {
             "name": "TO",
-            "source": "D1",
-            "target": "B1"
+            "source": "F1",
+            "target": "D1"
+        },
+        {
+            "name": "TO",
+            "source": "SampleDataNode2",
+            "target": "SampleDataNode1"
+        },
+        {
+            "name": "TO",
+            "source": "New 1st Tier Node",
+            "target": "A2"
         },
         {
             "name": "TO",
@@ -154,33 +159,8 @@
         },
         {
             "name": "TO",
-            "source": "E1",
-            "target": "D1"
-        },
-        {
-            "name": "TO",
-            "source": "D2",
-            "target": "B2"
-        },
-        {
-            "name": "TO",
-            "source": "default node",
-            "target": "A1"
-        },
-        {
-            "name": "TO",
-            "source": "sad",
-            "target": "stink"
-        },
-        {
-            "name": "TO",
-            "source": "SampleDataNode2",
-            "target": "SampleDataNode1"
-        },
-        {
-            "name": "TO",
-            "source": "E2",
-            "target": "D2"
+            "source": "D1",
+            "target": "B1"
         },
         {
             "name": "TO",
@@ -189,8 +169,43 @@
         },
         {
             "name": "TO",
-            "source": "F1",
-            "target": "D1"
+            "source": "F2",
+            "target": "D2"
+        },
+        {
+            "name": "TO",
+            "source": "E2",
+            "target": "D2"
+        },
+        {
+            "name": "TO",
+            "source": "SampleDataNode1",
+            "target": "SampleDataNode0"
+        },
+        {
+            "name": "TO",
+            "source": "D2",
+            "target": "B2"
+        },
+        {
+            "name": "test",
+            "source": "A1",
+            "target": "a"
+        },
+        {
+            "name": "TO",
+            "source": "New 2nd Tier Node",
+            "target": "A2"
+        },
+        {
+            "name": "TO",
+            "source": "B2",
+            "target": "A2"
+        },
+        {
+            "name": "TO",
+            "source": "New 4th Tier Node",
+            "target": "A2"
         }
     ]
 }

@@ -118,17 +118,13 @@
                 <div id="page-content">
                     
 					<h4 class="text-main pad-btm bord-btm">图谱编辑控件</h4>
-                    <h5 class="text-main pad-btm bord-btm">图谱编辑控件</h5>
                 
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="group">
-                                <input type="text" id="search" class="form-control input-lg" placeholder="请输入节点名称" style="width: 250px;">
-                                
+                                <!-- Category Select -->
                                 <div id="categorySelect">
-                                    <label for="dropdown">
-                                        选择节点类型：
-                                    </label>
+                                    <label for="catDropdown">选择节点类型：</label>
                                     <select name="category" id="catDropdown">
                                         <option value="0">1级节点</option>
                                         <option value="1">2级节点</option>
@@ -136,25 +132,32 @@
                                         <option value="3">4级节点</option>
                                     </select>
                                 </div>
+
                                 <div>
-                                    <input type="text" id="link-source" placeholder="请输入起始节点名称：">
-                                    <input type="text" id="link-relation" placeholder="请输入节点关系名称：">
-                                    <input type="text" id="link-destination" placeholder="请输入目标节点名称：">
+                                    <label for="search">请输入节点名称：</label>
+                                    <input type="text" id="search" class="form-control input-lg" placeholder="请输入节点名称" style="width: 250px;">
                                 </div>
-
-                                <span class="input-group-addon btn btn-primary" onclick="search()">
-                                </span>
-                            </div>
- 
                             
-
+                                <!-- Link-related Inputs -->
+                                <div>
+                                    <label for="catDropdown">Source:</label>
+                                    <input type="text" class="form-control input-lg" id="link-source" placeholder="请输入起始节点名称：" style="width: 250px;">
+                                    <label for="catDropdown">Relation:</label>
+                                    <input type="text" class="form-control input-lg" id="link-relation" placeholder="请输入节点关系名称：" style="width: 250px;">
+                                    <label for="catDropdown">Target:</label>
+                                    <input type="text" class="form-control input-lg" id="link-destination" placeholder="请输入目标节点名称：" style="width: 250px;">
+                                </div>
+                            
+                                <!-- Search Button -->
+                                <button class="input-group-addon btn btn-primary" onclick="addNode()" style="width: 122px; margin-top: 10px;">添加节点</button>
+                                <button class="input-group-addon btn btn-primary" onclick="deleteNode()" style="width: 122px; margin-top: 10px;">删除节点</button>
+                            </div>
 
 					    </div>
                     </div>
                     <div class="row" style="height: 40px;"></div>
                     <div class="row" >
                         <div class="col-lg-6" style="height: 400px;" id="relation">
-                            <div>placeholder</div>
                         </div>
 
                         <div class="col-lg-1"></div>
@@ -261,6 +264,34 @@
     </div>
     <!--===================================================-->
     <!-- END OF CONTAINER -->
-   
+
+    <script>
+        function addNode() {
+            // Get input values
+            var nodeType = document.getElementById("catDropdown").value;
+            var nodeName = document.getElementById("search").value;
+            var sourceNode = document.getElementById("link-source").value;
+            var relationName = document.getElementById("link-relation").value;
+            var targetNode = document.getElementById("link-destination").value;
+
+            console.log(nodeName)
+    
+            // Prepare data to send to Python (you might want to use AJAX for this)
+            var data = new FormData();
+            data.append("nodeType", nodeType);
+            data.append("nodeName", nodeName);
+            data.append("sourceNode", sourceNode);
+            data.append("relationName", relationName);
+            data.append("targetNode", targetNode);
+
+            // Send data to Python backend (you need to implement this part)
+            // Example using AJAX:
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/add_node");
+            xhr.send(data);
+        }
+    
+    </script>
+    
 </body>
 </html>

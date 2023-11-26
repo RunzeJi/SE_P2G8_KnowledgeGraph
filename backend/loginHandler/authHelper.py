@@ -5,7 +5,18 @@ credentialsDict = {"username":"password",
                    "admin":"password"} 
 userlist_path = "../SE_P2G8_KnowledgeGraph/backend/db_manipulate/userList.json"
 
-def addUser(username='', password=''): # Working
+def addUser(username='', password=''):
+
+    with open(userlist_path, 'r') as f:
+        userDict = json.loads(f.read())
+        userDict[username] = password
+        print(userDict)
+        f.close()
+    
+    with open(userlist_path, 'w') as f:
+        json.dump(userDict, f, indent=4)
+        f.close()
+
     sudoDriver = GraphDatabase.driver("bolt://localhost:7687/neo4j", auth=("neo4j", "sudoDriver"))
     try:
         with sudoDriver.session() as session:
@@ -13,10 +24,16 @@ def addUser(username='', password=''): # Working
             #session.run(f"ALTER USER {username} SET PASSWORD '{password}'")
             print(f'created new user:[{username}, {password}]')
             sudoDriver.close()
+
+        with open(userlist_path, 'r') as f:
+            userDict = json.loads(f.read())
+            userDict[username] = password
+            print(userDict)
+
     except Exception as e:
         print(e)
 
-def detectLogin(user, password): # Working
+def detectLogin(user, password):
     with open(userlist_path, 'r') as f:
         userDict = json.loads(f.read())
         print(userDict)
@@ -51,6 +68,6 @@ def deleteCredentials(credentialsDict, delName):
         json.dump(credentialsDict, f)
 
 if __name__ == "__main__":
-    #addUser('niggass', 'password')
+    #addUser('ni', 'password')
     print(detectLogin('admin', 'password'))
     
