@@ -45,7 +45,7 @@ def getLinks():
     with open(json_path, "r") as f:
         return json.loads(f.read())["links"]
     
-def appendNode_(cNumber, category, name):
+def appendNode_(cNumber, category, name): # Deprecated
     allNodes = getNodes()
     nodeToAppend = {'cNumber': cNumber, 'category': category, 'name': name}
     allNodes.append(nodeToAppend)
@@ -80,8 +80,7 @@ def appendNode(cNumber, category, name):
         return getNodes()
 
 
-
-def appendLink_(name, source, target):
+def appendLink_(name, source, target): # Deprecated
     allLinks = getLinks()
     linkToAppend = {'name': name, 'source': source, 'target': target}
     allLinks.append(linkToAppend)
@@ -122,8 +121,9 @@ def appendGD(nodes, links):
 
 
 if __name__ == "__main__":
+    
     #print(getNodes())
-
     #appendNode(cNumber=1000, category='0', name='default node')
     #appendLink(name="TO", source="default node", target='A1')
-    appendGD(appendNode(cNumber=1145, category=0, name='default node'), appendLink(name="TO", source="sad", target='bad'))
+
+    appendGD(appendNode(cNumber=3000, category=0, name='test'), appendLink(name="TO", source="test", target='A1'))
