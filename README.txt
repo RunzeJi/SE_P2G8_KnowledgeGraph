@@ -56,39 +56,39 @@
             如果显示 **"Neo4j is running"**，那么你就成功了!
 
         
-        ### For Linux
+        ### 对于 Linux
             #### Debian and Ubuntu
-                1.Execute the following code in your terminal:
+                1.在终端中执行:
                     wget -O - https://debian.neo4j.com/neotechnology.gpg.key | sudo apt-key add -
                     echo 'deb https://debian.neo4j.com stable latest' | sudo tee /etc/apt/sources.list.d/neo4j.list
                     sudo apt-get update
 
-                2.Then execute:
+                2.然后执行:
                     sudo apt-get install neo4j
 
-                3.Then check if Neo4j Server is correctly installed and running:
+                3.检查Neo4j Server是否运行:
                     sudo systemctl status neo4j
 
-                4.Go to:
+                4.前往:
                     http://localhost:7474/
 
                 大功告成！
 
         
-        ### For macOS (仅在Apple Silicon ARM64架构下测试，未对Intel x86架构进行测试)
-            #### First Go to the Neo4j [Deployment Center](https://neo4j.com/deployment-center/)
-                0.Download and install JDK17 from Oracle or OpenJDK
+        ### 对于 macOS (仅在Apple Silicon ARM64架构下测试，未对Intel x86架构进行测试)
+            #### 首先，前往 [Neo4j Deployment Center](https://neo4j.com/deployment-center/)
+                0. 下载安装JDK17
 
-                1.Download the macOS Version of Neo4j.
+                1. 下载适用于 macOS 版的 Neo4j.
 
-                2.Extract all files.
+                2. 解压所有文件.
 
-                3.Open Terminal under the extracted directory.
+                3. 在解压好的文件夹下打开终端。
 
-                4.Execute commands:
+                4. 执行下列命令:
                     ./bin/neo4-admin server console
 
-                5.In browser, open [http://localhost:7474](http://localhost:7474)
+                5. 在浏览器中打开 [http://localhost:7474](http://localhost:7474)
 
                 6.Use [bolt://localhost:7687](bolt://localhost:7687) to connect to database.
 
@@ -103,9 +103,9 @@
         |   |-- db_writeNode.py    用于Neo4j数据库节点控制
         |   |-- userList.json      存放软件用户名和密码
         |
-        |-- graphData              存放用于Apache ECharts图标的节点链接信息
+        |-- graphData              前端图谱展示相关代码和数据
         |   |-- gd.json            存放用于Apache ECharts图标的节点链接信息
-        |   |-- gd.py              用于增加Apache ECharts图标的节点链接信息
+        |   |-- gd.py              用于操作Apache ECharts图标的节点链接信息
         |
         |-- loginHelper            用于软件登录
         |   |-- authHelper.py      登录相关函数
