@@ -54,7 +54,7 @@ let categories = [
 ]
  
 option = {
-	title: {text: 'Data Captured From External Python Source',},
+	title: {text: 'Graphy',},
 	legend: [{
     data: categories.map(x => x.name),
   }],
