@@ -1,4 +1,5 @@
 # 软件工程_题目2第8组_知识图谱
+小组成员：纪润泽、田家硕、杨澍萌、吴一迪、谭维岳
 [项目GitHub地址](https://github.com/RunzeJi/SE_P2G8_KnowledgeGraph)
 
     本README.txt的目录：
